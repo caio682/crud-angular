@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class CursosComponent implements  OnInit {
 
-  cursos: Observable<Curso[]> ;
+  cursos$: Observable<Curso[]> ;
   displayedColumns = ['name', 'category'];
   // cursoService: CursosService;
   
@@ -18,7 +18,7 @@ export class CursosComponent implements  OnInit {
 
     // this.cursoService = new CursosService();
     // this.cursos = this.cursoService.list();
-    this.cursos = this.cursoService.list();
+    this.cursos$ = this.cursoService.list();
   
   } 
 
